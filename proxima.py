@@ -176,7 +176,9 @@ class proximaCommand:
         from datetime import datetime
         now = datetime.now()
         current_time = now.strftime("%H:%M")
-        return f"The current time is " + current_time
+        import pyfiglet
+        ascii_banner = pyfiglet.figlet_format(current_time)
+        return f"The current time is " + ascii_banner
     
     def getdate():
         from datetime import datetime
